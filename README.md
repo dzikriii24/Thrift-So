@@ -178,8 +178,8 @@ Project ini dilisensikan di bawah Lisensi MIT - lihat file [LICENSE](LICENSE) un
 ## 👨‍💻 Developer
 
 **Dzikri**
-- GitHub: [@username-anda](https://github.com/dzikriii24)
-- Email: email-dzikrirabbani2401@gmail.com
+- GitHub: [dzikriii24](https://github.com/dzikriii24)
+- Email: dzikrirabbani2401@gmail.com
 
 ---
 
