@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="100px"
+        android:outlineAmbientShadowColor="@color/retro_light_orange">
+
+        <!-- Success Icon -->
+        <ImageView
+            android:id="@+id/ivSuccess"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_success"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Success Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order Successful!"
+            android:textSize="28sp"
+            android:textColor="@color/retro_brown"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Success Message -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thank you for your purchase! Your order has been confirmed and will be shipped soon."
+            android:textSize="16sp"
+            android:textColor="@color/retro_dark_brown"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="32dp"
+            android:paddingHorizontal="16dp" />
+
+        <!-- Order Details Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/white"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Order Details"
+                    android:textSize="20sp"
+                    android:textColor="@color/retro_brown"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Order ID -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Order ID:"
+                        android:textSize="14sp"
+                        android:textColor="@color/retro_brown"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvOrderId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="#THRIFT12345"
+                        android:textSize="14sp"
+                        android:textColor="@color/retro_dark_brown"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <!-- Order Date -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Order Date:"
+                        android:textSize="14sp"
+                        android:textColor="@color/retro_brown" />
+
+                    <TextView
+                        android:id="@+id/tvOrderDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="25/12/2023 14:30"
+                        android:textSize="14sp"
+                        android:textColor="@color/retro_dark_brown" />
+
+                </LinearLayout>
+
+                <!-- Customer Name -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Customer:"
+                        android:textSize="14sp"
+                        android:textColor="@color/retro_brown" />
+
+                    <TextView
+                        android:id="@+id/tvCustomerName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="John Doe"
+                        android:textSize="14sp"
+                        android:textColor="@color/retro_dark_brown" />
+
+                </LinearLayout>
+
+                <!-- Email -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Email:"
+                        android:textSize="14sp"
+                        android:textColor="@color/retro_brown" />
+
+                    <TextView
+                        android:id="@+id/tvCustomerEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="john@example.com"
+                        android:textSize="14sp"
+                        android:textColor="@color/retro_dark_brown" />
+
+                </LinearLayout>
+
+                <!-- Phone -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Phone:"
+                        android:textSize="14sp"
+                        android:textColor="@color/retro_brown" />
+
+                    <TextView
+                        android:id="@+id/tvCustomerPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+62 812-3456-7890"
+                        android:textSize="14sp"
+                        android:textColor="@color/retro_dark_brown" />
+
+                </LinearLayout>
+
+                <!-- Shipping Address -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Shipping:"
+                        android:textSize="14sp"
+                        android:textColor="@color/retro_brown" />
+
+                    <TextView
+                        android:id="@+id/tvShippingAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="123 Main St, Jakarta 12345"
+                        android:textSize="14sp"
+                        android:textColor="@color/retro_dark_brown"
+                        android:gravity="end" />
+
+                </LinearLayout>
+
+                <!-- Shipping Method -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Shipping Method:"
+                        android:textSize="14sp"
+                        android:textColor="@color/retro_brown" />
+
+                    <TextView
+                        android:id="@+id/tvShippingMethod"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Express (1-2 days)"
+                        android:textSize="14sp"
+                        android:textColor="@color/retro_dark_brown" />
+
+                </LinearLayout>
+
+                <!-- Payment Method -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Payment:"
+                        android:textSize="14sp"
+                        android:textColor="@color/retro_brown" />
+
+                    <TextView
+                        android:id="@+id/tvPaymentMethod"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bank Transfer (BCA)"
+                        android:textSize="14sp"
+                        android:textColor="@color/retro_dark_brown" />
+
+                </LinearLayout>
+
+                <!-- Order Items -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Order Items:"
+                    android:textSize="14sp"
+                    android:textColor="@color/retro_brown"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tvOrderItems"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Vintage Denim Jacket (M) x1 - Rp 250.000\n• Retro Sneakers (42) x1 - Rp 350.000"
+                    android:textSize="12sp"
+                    android:textColor="@color/retro_dark_brown"
+                    android:lineSpacingExtra="4dp"
+                    android:layout_marginBottom="12dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/retro_orange"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Total Amount -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Total Amount:"
+                        android:textSize="16sp"
+                        android:textColor="@color/retro_brown"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvTotalAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp 600.000"
+                        android:textSize="16sp"
+                        android:textColor="@color/retro_brown"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Next Steps -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="What's next?"
+            android:textSize="18sp"
+            android:textColor="@color/retro_brown"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="32dp"
+            android:background="@color/retro_cream"
+            android:padding="16dp"
+            android:gravity="center"
+            app:cardCornerRadius="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📧 You will receive an email confirmation"
+                android:textSize="14sp"
+                android:textColor="@color/retro_brown"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🚚 Your order will be shipped within 24 hours"
+                android:textSize="14sp"
+                android:textColor="@color/retro_brown"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📞 We'll contact you for delivery updates"
+                android:textSize="14sp"
+                android:textColor="@color/retro_brown" />
+
+        </LinearLayout>
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnContinueShopping"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Continue Shopping"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/button_retro_style"
+                android:textColor="@color/retro_cream"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnViewOrders"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="View My Orders"
+                android:background="@color/retro_orange"
+                android:textColor="@color/retro_cream"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <!-- Support Info -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Need help? Contact support@thriftso.com"
+            android:textSize="12sp"
+            android:textColor="@color/retro_gray"
+            android:gravity="center"
+            android:layout_marginTop="24dp" />
+
+    </LinearLayout>
+
+</ScrollView>

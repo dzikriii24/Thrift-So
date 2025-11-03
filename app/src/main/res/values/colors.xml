@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Retro Color Palette -->
+    <color name="retro_cream">#FFF8E1</color>
+    <color name="retro_orange">#FF9800</color>
+    <color name="orange">#FF9800</color>
+    <color name="retro_light_orange">#FFE0B2</color>
+    <color name="retro_dark_orange">#F57C00</color>
+    <color name="retro_brown">#5D4037</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="retro_green">#4CAF50</color>
+    <color name="retro_red">#F44336</color>
+    <color name="retro_gray">#9E9E9E</color>
+    <color name="retro_dark_brown">#3E2723</color>
+    <color name="retro_light_brown">#8D6E63</color>
+    <color name="bottom_nav_color">#FFFFFF</color>
+    <color name="primaryColor">#FF3B30</color>
+    <color name="secondaryColor">#4CAF50</color>
+
+</resources>

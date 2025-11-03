@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ThriftSo</string>
+    <string name="price_format">Rp %1$.0f x %2$d</string>
+    <string name="size_format">Size: %1$s</string>
+</resources>

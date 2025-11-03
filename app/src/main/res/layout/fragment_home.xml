@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white
+">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- App Bar / Header -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <!-- Logo & App Name -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="70dp"
+                            android:layout_marginTop="1dp"
+                            android:fontFamily="serif"
+                            android:src="@mipmap/logo"
+                            android:textColor="@color/white"
+                            android:textSize="42sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.8"
+                            android:text="Vintage Fashion Store"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!-- Cart Icon with Badge -->
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/ivCart"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:contentDescription="Cart"
+                            android:padding="4dp"
+                            android:src="@drawable/baseline_add_shopping_cart_24"
+                            app:tint="@android:color/background_dark" />
+
+                        <TextView
+                            android:id="@+id/tvCartBadge"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_gravity="end|top"
+                            android:background="@drawable/badge_background"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@android:color/white"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            android:visibility="gone"
+                            tools:text="5"
+                            tools:visibility="visible" />
+                    </FrameLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Search Bar -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@android:color/white">
+
+                <LinearLayout
+                    android:id="@+id/searchBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="12dp"
+                    android:gravity="center_vertical"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@android:drawable/ic_menu_search"
+                        android:alpha="0.6"
+                        android:contentDescription="Search"
+                        app:tint="@color/retro_brown" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="12dp"
+                        android:text="Search vintage items..."
+                        android:textSize="15sp"
+                        android:textColor="@color/retro_brown"
+                        android:alpha="0.6" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Banners Section -->
+            <LinearLayout
+                android:id="@+id/bannerSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/tvBannerTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="Special Offers"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/retro_brown" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvBanners"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:clipToPadding="false"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    tools:listitem="@layout/item_banner" />
+            </LinearLayout>
+
+            <!-- Categories Section -->
+            <LinearLayout
+                android:id="@+id/categorySection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="24dp">
+
+                <TextView
+                    android:id="@+id/tvCategoriesTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="Categories"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/retro_brown" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvCategories"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    tools:listitem="@layout/item_category" />
+            </LinearLayout>
+
+            <!-- Featured Products Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Featured Products"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/retro_brown" />
+
+                    <TextView
+                        android:id="@+id/tvSeeAllFeatured"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="See All"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/retro_orange"
+                        android:padding="4dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvFeaturedProducts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:nestedScrollingEnabled="false"
+                    tools:listitem="@layout/item_product" />
+            </LinearLayout>
+
+            <!-- New Arrivals Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="24dp"
+                android:paddingBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="New Arrivals"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/retro_brown" />
+
+                    <TextView
+                        android:id="@+id/tvSeeAllNewArrivals"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="See All"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/retro_orange"
+                        android:padding="4dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvNewArrivals"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    tools:listitem="@layout/item_product_horizontal" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

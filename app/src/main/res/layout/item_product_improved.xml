@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardProduct"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="6dp"
+    app:cardBackgroundColor="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- Image dengan overlay badges -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginBottom="8dp">
+
+            <ImageView
+                android:id="@+id/ivProduct"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:background="@color/white"
+                android:contentDescription="Product image" />
+
+            <!-- Discount Badge -->
+            <TextView
+                android:id="@+id/tvDiscountBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/badge_discount"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <!-- Condition Badge -->
+            <TextView
+                android:id="@+id/tvConditionBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/badge_condition"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="Good"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <!-- Featured Badge -->
+            <TextView
+                android:id="@+id/tvFeaturedBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/badge_featured"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="4dp"
+                android:text="FEATURED"
+                android:textColor="@color/retro_brown"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <!-- Wishlist Button -->
+            <ImageButton
+                android:id="@+id/btnWishlist"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/circle_retro_brown"
+                android:padding="6dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_heart_outline" />
+
+            <!-- DELETE BUTTON BARU -->
+            <!-- Dalam RelativeLayout image, tambah ini: -->
+            <ImageButton
+                android:id="@+id/btnDelete"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/circle_retro_red"
+                android:padding="6dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_delete"
+                android:visibility="invisible"/>
+
+        </RelativeLayout>
+
+        <!-- Product Info -->
+        <TextView
+            android:id="@+id/tvProductName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vintage Denim Jacket"
+            android:textColor="@color/retro_brown"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Rating -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:rating="4.5"
+                android:stepSize="0.5"
+                android:progressTint="@color/retro_orange"
+                android:layout_gravity="center_vertical"
+                style="?android:attr/ratingBarStyleSmall" />
+
+            <TextView
+                android:id="@+id/tvReviewCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="(128)"
+                android:textColor="@color/retro_dark_brown"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <!-- Price -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvProductPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp 250.000"
+                android:textColor="@color/retro_dark_orange"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvOriginalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Rp 300.000"
+                android:textColor="@color/retro_gray"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/tvProductDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Classic denim jacket from 90s with perfect condition"
+            android:textColor="@color/retro_dark_brown"
+            android:textSize="12sp"
+            android:maxLines="2"
+            android:ellipsize="end" />
+
+        <!-- Seller Info -->
+        <TextView
+            android:id="@+id/tvSeller"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Sold by Retro Thrift Store"
+            android:textColor="@color/retro_gray"
+            android:textSize="10sp" />
+
+        <!-- Size Selection & Add to Cart -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8px"
+            android:gravity="center_vertical">
+
+            <Spinner
+                android:id="@+id/spinnerSize"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:padding="8dp" />
+
+            <Button
+                android:id="@+id/btnAddToCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Add to Cart"
+                android:textAllCaps="false"
+                android:textSize="12sp"
+                android:background="@drawable/button_retro_style"
+                android:textColor="@color/retro_cream" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

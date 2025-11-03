@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Retro Cart"
+        android:textSize="24sp"
+        android:textColor="@color/retro_brown"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="50px"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 🛒 RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- 😴 Empty cart state -->
+    <TextView
+        android:id="@+id/tvEmptyCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your cart is empty!"
+        android:textSize="16sp"
+        android:textColor="@color/retro_brown"
+        android:gravity="center"
+        android:visibility="gone"
+        android:padding="24dp" />
+
+    <!-- 💰 Checkout section -->
+    <LinearLayout
+        android:id="@+id/checkoutSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/retro_gradient_bg"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvTotal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Total: Rp 0"
+            android:textSize="18sp"
+            android:textColor="@color/retro_brown"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnCheckout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Checkout"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/retro_brown" />
+
+    </LinearLayout>
+
+</LinearLayout>
